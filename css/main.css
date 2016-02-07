@@ -1,0 +1,138 @@
+/* Project CSS 
+============================================================
+============================================================*/
+
+body {
+    background-color: #444;
+}
+
+a {
+    color: #B24200;
+}
+
+a:hover,
+a:active {
+    color: #FF5E00;
+}
+
+/* HEADER ============================== */
+
+header {
+    background-color: #444;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: .5%;
+    text-align: center;
+}
+
+header img {
+    max-height: 5%;
+    max-width: 10%;
+}
+
+/* ABOUT ============================== */
+
+#about {
+    background-color: #DDD;
+    background-image: url("../images/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .5% auto;
+    max-width: 70%;
+    min-height: 345px;
+    padding: .5%;
+}
+
+#about h2 {
+    display: none;
+}
+
+#about p {
+    background-color: #FFF;
+    border-radius: .2em;
+    color: teal;
+    max-width: 45%;
+    min-height: 320px;
+    margin: 2%;
+    opacity: 0.8;
+    padding: .5%;
+}
+
+/* COMPONENTS ============================== */
+
+article {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    margin: 2%;
+    padding: .5%;
+}
+
+h3 {
+    color: teal;
+    font: 1.8em 'Courier New', monospace;
+}
+
+#components {
+    background-color: #EEE;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: .5%;
+}
+
+#components footer {
+    border-top: 1px solid #EEE;
+    margin: 2% 0 0 0;
+    padding: .5%;
+    text-align: right;
+}
+
+#components h2 {
+    display: none;
+}
+
+#components header {
+    background-color: #FFF;
+    max-width: 100%;
+    text-align: left;
+}
+
+#components img {
+    border-bottom: 1px solid #EEE;
+    max-width: 100%;
+    padding: 0 0 1% 0;
+}
+
+#components p {
+    padding: .5%;
+    margin: 1% 0 0 0;
+}
+
+.featured {
+    border: 3px solid teal;
+}
+
+.featured h3 {
+    font-weight: bold;
+}
+
+/* CSS BREAKPOINTS ========================= */
+
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    header img {max-width: 15%;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #about p {max-width: 100%;}
+    header img {max-width: 20%;}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    #about p {max-width: 100%;}
+    h3 {font-size: 1.5em;}
+    header img {max-width: 30%;}
+}
