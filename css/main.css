@@ -4,6 +4,7 @@
 
 body {
     background-color: #444;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -52,6 +53,7 @@ header img {
     background-color: #FFF;
     border-radius: .2em;
     color: teal;
+    font-weight: 300;
     max-width: 45%;
     min-height: 320px;
     margin: 2%;
@@ -71,6 +73,15 @@ article {
 h3 {
     color: teal;
     font: 1.8em 'Courier New', monospace;
+    margin: 0;
+}
+
+h4 {
+    color: teal;
+    font-weight: 600;
+    margin: 1% 0 0 0;
+    padding: .5%;
+    text-decoration: underline;
 }
 
 #components {
@@ -80,32 +91,34 @@ h3 {
     padding: .5%;
 }
 
-#components footer {
+#components h2 {
+    display: none;
+}
+
+article footer {
     border-top: 1px solid #EEE;
     margin: 2% 0 0 0;
     padding: .5%;
     text-align: right;
 }
 
-#components h2 {
-    display: none;
-}
-
-#components header {
+article header {
     background-color: #FFF;
     max-width: 100%;
     text-align: left;
 }
 
-#components img {
+article img {
     border-bottom: 1px solid #EEE;
     max-width: 100%;
     padding: 0 0 1% 0;
 }
 
-#components p {
+article p {
+    font-size: .8em;
+    margin: 0;
     padding: .5%;
-    margin: 1% 0 0 0;
+    text-align: justify;
 }
 
 .featured {
