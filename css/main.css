@@ -16,58 +16,8 @@ a:active {
     color: #FF5E00;
 }
 
-/* HEADER ============================== */
-
-header {
-    background-color: #444;
-    margin: 0 auto;
-    max-width: 70%;
-    padding: .5%;
-    text-align: center;
-}
-
-header img {
-    max-height: 5%;
-    max-width: 10%;
-}
-
-/* ABOUT ============================== */
-
-#about {
-    background-color: #DDD;
-    background-image: url("../images/hero.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .5% auto;
-    max-width: 70%;
-    min-height: 345px;
-    padding: .5%;
-}
-
-#about h2 {
+h2 {
     display: none;
-}
-
-#about p {
-    background-color: #FFF;
-    border-radius: .2em;
-    color: teal;
-    font-weight: 300;
-    max-width: 45%;
-    min-height: 320px;
-    margin: 2%;
-    opacity: 0.8;
-    padding: .5%;
-}
-
-/* COMPONENTS ============================== */
-
-article {
-    background-color: #FFF;
-    border: 1px solid #DDD;
-    margin: 2%;
-    padding: .5%;
 }
 
 h3 {
@@ -84,15 +34,70 @@ h4 {
     text-decoration: underline;
 }
 
+strong {
+    background-color: #FF5E00;
+    border-radius: .4em .4em 0 0;
+    color: #FFF;
+    float: right;
+    padding: 1%;
+    text-transform: uppercase;
+}
+
+
+/* HEADER ============================== */
+
+header {
+    background-color: #444;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: .5%;
+    text-align: center;
+}
+
+header img {
+    max-height: 5%;
+    max-width: 10%;
+}
+
+
+/* ABOUT ============================== */
+
+#about {
+    background: #444 url("../images/hero.jpg") no-repeat center center;
+    background-size: cover;
+    margin: .5% auto;
+    max-width: 70%;
+    min-height: 345px;
+    padding: .5%;
+}
+
+#about p {
+    background-color: #FFF;
+    border-radius: .2em;
+    color: teal;
+    max-width: 45%;
+    min-height: 320px;
+    margin: 2%;
+    opacity: 0.8;
+    padding: .5%;
+    text-align: justify;
+}
+
+
+/* COMPONENTS ============================== */
+
+article {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    margin: 2%;
+    padding: .5%;
+}
+
 #components {
     background-color: #EEE;
     margin: 0 auto;
     max-width: 70%;
     padding: .5%;
-}
-
-#components h2 {
-    display: none;
 }
 
 article footer {
@@ -121,31 +126,70 @@ article p {
     text-align: justify;
 }
 
+li {
+    font-size: .8em;
+    list-style-type: none;
+    padding: .5%;
+}
+
+li:nth-child(odd) {
+    background-color: #EEE;
+}
+
+ul {
+    margin: 0;
+    padding: .5%;
+}
+
 .featured {
     border: 3px solid teal;
 }
 
 .featured h3 {
+    float: left;
     font-weight: bold;
 }
+
+.featured img {
+    border: 3px solid #FF5E00;
+    max-width: 99.5%;
+    padding: 0;
+}
+
+#visual {
+    border: 0;
+}
+
 
 /* CSS BREAKPOINTS ========================= */
 
 @media only screen and (min-width: 992px) and (max-width: 1999px) {
-    
+    #about p {min-height: 150px;
+              padding:10% 1%;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     header img {max-width: 15%;}
+    .featured img {max-width: 99%;}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    #about p {max-width: 100%;}
+    #about p {max-width: 100%;
+              min-height: 150px;
+              opacity: 0.9;
+              padding: 14% 1%;}
     header img {max-width: 20%;}
+    .featured img {max-width: 98.6%;}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-    #about p {max-width: 100%;}
+    #about {background-image: none;
+            max-width: 73%;}
+    #about p {border: 3px solid teal;
+              max-width: 100%;
+              opacity: 0.9;
+              padding: 2%;}
     h3 {font-size: 1.5em;}
     header img {max-width: 30%;}
+    .featured img {max-width: 98%;}
 }
