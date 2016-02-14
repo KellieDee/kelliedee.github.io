@@ -2,18 +2,19 @@
 ============================================================
 ============================================================*/
 
-a {
-    color: #FFF;
-    font: 1.1em Voltaire, sans-serif;
-    text-transform: uppercase;
-}
-
 nav {
-    background-color: #303334;
+    background-color: #303334; 
     position: fixed;
-    top: 0px;
     width: 100%;
 }
+
+#wrapper {
+    background-color: inherit;
+    padding: 0 15px;
+    text-align: center;
+}
+
+/********** MENU LIST **********/
 
 ul::after {
     content: "";
@@ -23,26 +24,41 @@ ul::after {
 
 ul li {
     display: inline-block;
-    float: left;
     list-style-type: none;
-    padding: 1.5em 2em;
+    padding: 30px 35px;
+    position: relative;
     text-align: center;
 }
 
+a {
+    color: #FFF;
+    font: 18px Voltaire, sans-serif;
+    text-transform: uppercase;
+    transition: .35s all ease;
+}
+
+a:hover {
+    color: #E8504F;
+    transition: .35s all ease;
+}
+
+/********** SUB MENU LIST **********
+
+
 ul li ul {
-    background-color: #303334;
     display: none;
+    left: -10px;
+    max-width: 125px;
+    margin: 15px;
     position: absolute;
-    width: 100%;
-    border: 1px solid blue
+    top: 80px;
 }
 
 ul li ul li {
+    background-color: #303334;
     display: block;
-    float: none;
-    margin: 0;
+    position: relative;
     padding: 0;
-    border: 1px solid green
 }
 
 /********** PAGE STYLE *************/
@@ -56,6 +72,14 @@ p {
 
 /********** MEDIA QUERIES **********/
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-    nav ul {border: 1px solid green;}
+@media only screen and (min-width: 488px) and (max-width: 787px) {
+    /* Hamburger Button */
+    nav ul li::after {
+        content: url('images/hamburger.png') no-repeat;
+        height: 20px;
+        width: 20px;
+    }
+    nav ul li {padding: 0;}
+    nav ul li a {display: none;}
+    }
 }

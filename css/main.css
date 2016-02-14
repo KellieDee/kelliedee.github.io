@@ -123,10 +123,10 @@ article p {
 }
 
 footer a {
-    background-color: teal;
+    background-color: #FFF;
     border: 1px solid teal;
     border-radius: .2em;
-    color: #FFF;
+    color: teal;
     display: block;
     float: right;
     margin: .5% 0 0 1%;
@@ -135,9 +135,11 @@ footer a {
 }
 
 footer a:active,
-footer a:hover {
-    background-color: #FF5E00;
-    border-color: #FF5E00;
+footer a:hover,
+.component {
+    background-color: teal;
+    border-color: teal;
+    color: #FFF;
 }
 
 li {
@@ -153,6 +155,11 @@ li:nth-child(odd) {
 ul {
     margin: 0;
     padding: .5%;
+}
+
+.component:hover {
+    background-color: #FF5E00;
+    border-color: #FF5E00;
 }
 
 .featured {
