@@ -8,12 +8,7 @@ body {
 }
 
 a {
-    color: #B24200;
-}
-
-a:hover,
-a:active {
-    color: #FF5E00;
+    text-decoration: none;
 }
 
 h2 {
@@ -103,6 +98,7 @@ article {
 article footer {
     border-top: 1px solid #EEE;
     margin: 2% 0 0 0;
+    overflow: hidden;
     padding: .5%;
     text-align: right;
 }
@@ -124,6 +120,24 @@ article p {
     margin: 0;
     padding: .5%;
     text-align: justify;
+}
+
+footer a {
+    background-color: teal;
+    border: 1px solid teal;
+    border-radius: .2em;
+    color: #FFF;
+    display: block;
+    float: right;
+    margin: .5% 0 0 1%;
+    padding: .5%;
+    text-align: center;
+}
+
+footer a:active,
+footer a:hover {
+    background-color: #FF5E00;
+    border-color: #FF5E00;
 }
 
 li {

@@ -1,0 +1,227 @@
+/* Component Stylesheet 
+============================================================
+============================================================*/
+
+body {
+    font-family: Lato, sans-serif;    
+}
+
+a {
+    color: #BDBEBF;
+    transition: all 0.3s ease;
+}
+
+a:hover,
+#copyright a:hover {
+    color: #DC6226;
+    transition: all 0.3s ease;
+}
+
+dl {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 54px;
+}
+
+dl dt {
+    float: left;
+}
+
+dl dt:not(:first-of-type) {
+    width: 75px;
+}
+
+h2 {
+    color: #E8EEF2;
+    font: 900 16px/20px Lato, sans-serif;
+    text-transform: uppercase;
+}
+
+nav,
+nav h2,
+section h2 {
+    margin-bottom: 30px;
+}
+
+ul li {
+    list-style-type: none;  
+}
+
+nav ul li a {
+    font: 300 14px/23px Lato, sans-serif;
+}
+
+#active a {
+    color: #DC6226;
+}
+
+input[type="text"] {
+    background-color: #3D3D3D;
+    border: 1px solid #DC6226;
+    border-right: none;
+    color: #E8EEF2;
+    float: left;
+    font: normal 12px/20px Lato, sans-serif;
+    margin-top: 10px;
+    min-width: 100%;
+    outline: none;
+    padding: 10px 105px 11px 13px;
+    position: relative;
+}
+
+input[type="submit"] {
+    color: #E8EEF2;
+    float: right;
+    font: 700 16px/22px Lato, sans-serif;
+    height: 43px;
+    background-color: #DC6226;
+    margin-left: -97px;
+    margin-top: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 97px;
+}
+
+input[type="submit"]:hover {
+    background-color: #363636;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #3D3D3D;
+    color: #BDBEBF;
+}
+
+footer:first-of-type {
+    padding: 75px 15px 0px 15px;
+}
+
+#legal {
+    border-top: 3px solid #5B5B5B;
+    color: #E8EEF2;
+    font: normal 14px/20px Lato, sans-serif;
+    margin-top: 40px;
+    padding: 45px 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#legal a {
+    color: #E8EEF2;
+    transition: all 0.3s ease;
+}
+
+form {
+    width: 100%;
+}
+
+#connect {
+    margin-bottom: 95px;
+}
+
+#connect::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+strong {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#switch {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+#switch a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    padding-bottom: 20px;
+}
+
+aside::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section:not(#connect) {
+    width: 236px;
+}
+
+#wrapper {
+    background-color: inherit;
+}
+
+footer:not(#legal)::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/********** SOCIAL MEDIA ***********/
+
+#connect li a {
+    display: block;
+    float: left;
+    height: 55px;
+    text-indent: -9999px;
+}
+
+#connect li a:not(first) {
+    margin-left: 5px;
+}
+
+#facebook {
+    background-image: url('images/facebook.png');
+    width: 30px;
+}
+
+#google {
+    background-image: url('images/google.png');
+    width: 45px;
+}
+
+#instagram {
+    background-image: url('images/instagram.png');
+    width: 45px;
+}
+
+#pinterest {
+    background-image: url('images/pinterest.png');
+    width: 45px;
+}
+
+#twitter {
+    background-image: url('images/twitter.png');
+    width: 45px;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 60px; padding-left: 10px; width: 40%;}
+    div:not(#wrapper), nav, section:not(#connect) {float: left;}
+    div:not(#wrapper) {width: 60%;}
+    nav {margin-right: 20px;}
+    section:not(#connect) {max-width: 100%}
+    #connect {margin-right: 10px;}
+    #legal {clear:both;}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 60px; padding-left: 10px; width: 40%;}
+    div:not(#wapper), nav, section:not(#connect) {float: left;}
+    div:not(#wrapper) {width: 60%;}
+    nav {margin-right: 60px; width:140px;}
+    footer:not(#legal) {max-width:100%;}
+    section:not(#connect) {width:300px;}
+    #connect {margin-right: 10px;}
+    #legal {clear:both;}
+    #wrapper {width: 90%; margin: 0 5%;}
+}

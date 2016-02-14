@@ -2,3 +2,48 @@
 ============================================================
 ============================================================*/
 
+body {
+    background-color: #CCC;
+}
+
+/********** NAVIGATION **********/
+
+nav {
+    background-color: #FFF;
+    width: 100%;
+}
+
+nav a {
+    color: #929292;
+    font: normal 18px/36px 'Bitter', serif;
+    transition: 0.5s all ease;
+}
+
+nav a:hover {
+    color: #222118;
+    transition: 0.5s all ease;
+}
+
+nav ul {
+    margin: 0 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 31px 0 28px 0;
+}
+
+nav ul li:not(:first-of-type) {
+    margin-left: 58px;
+}
+
+/********** SUBMENU **********/
+
+div {
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}

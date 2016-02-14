@@ -2,3 +2,29 @@
 ============================================================
 ============================================================*/
 
+section {
+    color: #FFF;
+    background: #111 url('highway.jpg') no-repeat fixed center center;
+    text-align: center;
+}
+
+h1 {
+    font: 700 4.375em/1.2 Roboto, sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h6 {
+    font: normal 1.250em/1.5 'Noto Sans', sans-serif;
+    margin-bottom: 1em;
+}
+
+hr {
+    opacity: 0.4980;
+    width: 10.625em;
+}
+
+p {
+    font-family: 'Noto Sans';
+    margin-top: 2em;
+}

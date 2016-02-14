@@ -2,3 +2,24 @@
 ============================================================
 ============================================================*/
 
+article {
+    position: relative;
+}
+
+img {
+    border: 20px solid;
+}
+
+img:hover {
+    z-index: -1;
+}
+
+div {
+    display: none;
+    position: absolute;
+    color: #FFF;
+    background: #000;
+    width: 230px;
+    height: 230px;
+    z-index: 0;
+}
