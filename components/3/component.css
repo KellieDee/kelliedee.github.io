@@ -4,18 +4,20 @@
 
 section {
     color: #FFF;
-    background: #111 url('highway.jpg') no-repeat fixed center center;
+    background: #111 url('images/highway.jpg') no-repeat fixed center center;
+    padding: 30px 15px 70px 15px;
     text-align: center;
 }
 
+/********** HEADER **********/
+
 h1 {
-    font: 700 4.375em/1.2 Roboto, sans-serif;
-    letter-spacing: 0.2em;
+    font: bold 33px/39.6px Roboto, sans-serif;
     text-transform: uppercase;
 }
 
 h6 {
-    font: normal 1.250em/1.5 'Noto Sans', sans-serif;
+    font: normal 16px/19.2px 'Noto Sans', sans-serif;
     margin-bottom: 1em;
 }
 
@@ -24,7 +26,72 @@ hr {
     width: 10.625em;
 }
 
-p {
-    font-family: 'Noto Sans';
+/********** CONTENT **********/
+
+p:nth-of-type(1) {
+    color: #CBCBCB;
+    font: normal 16px/24px 'Noto Sans', sans-serif;
     margin-top: 2em;
+}
+
+/********** BUTTONS **********/
+
+a {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    color: #FFF;
+    display: block;
+    font: bold 16px/20px 'Roboto', sans-serif;
+    letter-spacing: 1.92px;
+    padding: 16px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s all ease;
+}
+
+a:hover {
+    background-color: rgba(231, 78, 62, 1);
+    border: 2px solid rgba(231, 78, 62, 1);
+    transition: 0.2s all ease;
+}
+
+p:nth-of-type(2) {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+p:nth-of-type(3) {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media only screen and (min-width: 488px) and (max-width: 787px) {
+    p:nth-of-type(3) {margin-left:25px};
+}
+
+@media only screen and (min-width: 788px) and (max-width: 996px) {
+    h1 {font-size: 62px; letter-spacing: 0.2em; line-height: 1.2;}
+    h6 {font-size: 22px; line-height: 1.2;}
+    p:nth-of-type(1) {line-height: 24px; padding: 0 50px;}
+    p:nth-of-type(3) {margin-left:25px};   
+}
+
+@media only screen and (min-width: 997px) and (max-width: 1190px) {
+    a {padding: 16px 60px;}
+    h1 {font-size: 70px; letter-spacing: 0.2em; line-height: 1.2;}
+    h6 {font-size: 22px; line-height: 1.2;}
+    p:nth-of-type(1) {line-height: 24px; padding: 0 50px;}
+    p:nth-of-type(2) {margin-top: 76px;}
+    p:nth-of-type(3) {margin: 76px 0 0 25px;}
+}
+
+@media only screen and (min-width: 1191px) and (max-width: 1999px) {
+    a {padding: 16px 60px;}
+    h1 {font-size: 70px; letter-spacing: 0.2em; line-height: 1.2;}
+    h6 {font-size: 22px; line-height: 1.2;}
+    p:nth-of-type(1) {line-height: 24px; padding: 0 180px;}
+    p:nth-of-type(2) {margin-top: 76px;}
+    p:nth-of-type(3) {margin: 76px 0 0 25px;}
 }
