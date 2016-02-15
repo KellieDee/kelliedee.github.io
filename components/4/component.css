@@ -2,3 +2,117 @@
 ============================================================
 ============================================================*/
 
+section {
+    background-color: rgb(241,241,241);
+    padding-top: 40px;
+    z-index: 2;
+}
+
+h3 {
+    color: #131313;
+    font: bold 24px/43.6363px 'Raleway', sans-serif;
+    letter-spacing: 1.008px;
+    margin: 0 15px 0px 15px;
+    padding-bottom: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+/********** IMAGES **********/
+
+div {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+img {
+    height: auto;
+    min-width: 100%;
+    width: 100%;
+}
+
+/*********** NAMEPLATES ***********/
+
+h4 {
+    color: #FFF;
+    display: block;
+    font: bold 18px/30.8572px 'Raleway', sans-serif;
+    letter-spacing: 1.008px;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+
+header {
+    background-color: rgb(243,181,83);
+    bottom: 9.188px;
+    display: block;
+    left: 7.6875px;
+    padding: 10px 10px 13px 10px;
+    position: absolute;
+    right: 7.6875px;
+    z-index: 1;
+}
+
+p {
+    color: #FFF;
+    display: block;
+    float: left;
+    font: normal 12px/12px 'Raleway', sans-serif;
+    vertical-align: top;
+}
+
+/********** SOCIAL MEDIA ICONS **********/
+
+ul {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 23px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: #FFF;
+    transition: 0.3s all ease;
+}
+
+ul li a:hover {
+    color: #000;
+    transition: 0.3s all ease;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media only screen and (min-width: 488px) and (max-width: 787px) {
+    div {max-width: calc(100%/2);}
+    h4 {font: bold 14px/24.0001px 'Raleway', sans-serif;}
+}
+
+@media only screen and (min-width: 788px) and (max-width: 996px) {
+    div {max-width: calc(100%/2);}
+    header {bottom: 1px; display: none; padding: 20px 15px 18px 16px; left: 27.297px; right: 27.297px;}
+    ul { right: 20px; top:33px;}
+}
+
+@media only screen and (min-width: 997px) and (max-width: 1424px) {
+    div {max-width: calc(100%/4);}
+    h4 {font: bold 14px/1.2px 'Raleway', sans-serif; padding-top: 10px;}
+    header {bottom: 1px; display: none; padding: 10px 10px 13px 10px; left: 5.063px; right: 5.063px;}
+    p {padding-top: 5px;}
+    ul { right: 10px; top: 15px;}
+}
+
+@media only screen and (min-width: 1293px) and (max-width: 1999px) {
+    div {max-width: calc(100%/4);}
+    h4 {font: bold 14px/1.2px 'Raleway', sans-serif; padding-top: 10px;}
+    header {bottom: 1px; display: none; padding: 10px 10px 13px 10px; left: 5.063px; right: 5.063px;}
+    p {padding-top: 5px;}
+    section {margin: 0 66.5px;}
+    ul { right: 10px; top: 15px;}
+}
