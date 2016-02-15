@@ -50,6 +50,7 @@ nav > ul > li:not(:first-of-type) {
 div {
     background-color: #2E3026;
     color: #FFF;
+    display: none;
     position: absolute;
     left: 0;
     padding: 50px 30px 0 30px;
@@ -135,13 +136,30 @@ article::after {
     clear: both;
 }
 
-article > h6 {
+article > h6{
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-article img {
+article > h6 > a {
+    color: #FFF;
+    transition: 0.5s all ease;
+}
+
+article > h6 > a:hover {
+    color: #FF680A;
+    transition: 0.5s all ease;
+}
+
+article > img {
     float: left;
     margin: 0 31px 28px 0;
+}
+
+article > p {
+    color: #B4B4B4;
+    font: 14px/24px 'Open Sans', sans-serif;
+    padding-bottom: 24px;
+    text-transform: capitalize /* Seriously, WHY? */
 }
