@@ -4,6 +4,13 @@
 
 body {
     background-color: #CCC;
+    font: 14px/24px 'Open Sans', sans-serif;
+}
+
+h6 {
+    font: normal 18px/24px 'Bitter', serif;
+    margin-bottom: 36px;
+    position: relative;
 }
 
 /********** NAVIGATION **********/
@@ -13,37 +20,128 @@ nav {
     width: 100%;
 }
 
-nav a {
+nav > ul > li > a {
     color: #929292;
     font: normal 18px/36px 'Bitter', serif;
     transition: 0.5s all ease;
 }
 
-nav a:hover {
+nav > ul > li > a:hover {
     color: #222118;
     transition: 0.5s all ease;
 }
 
-nav ul {
+nav > ul {
     margin: 0 40px;
 }
 
-nav ul li {
+nav > ul > li {
     display: inline-block;
     list-style-type: none;
     padding: 31px 0 28px 0;
 }
 
-nav ul li:not(:first-of-type) {
+nav > ul > li:not(:first-of-type) {
     margin-left: 58px;
 }
 
 /********** SUBMENU **********/
 
 div {
-    background-color: black;
-    color: white;
+    background-color: #2E3026;
+    color: #FFF;
     position: absolute;
-    width: 100%;
     left: 0;
+    padding: 50px 30px 0 30px;
+    top: 95px;
+}
+
+div::before {
+    content: "";
+    left: 8%;
+    position: absolute;
+    top: -7px;
+    border-color: transparent transparent #2E3026 transparent;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+    
+}
+
+section {
+    float: left;
+    padding: 0 20px;
+}
+
+/********** SECTION 1 **********/
+
+section:nth-of-type(1) {
+    width: 30%;
+}
+
+#about p::before {
+    content: url('images/megamenu-img1.jpg');
+    display: block;
+    margin-bottom: 28px;
+    clear: both;
+}
+
+#about p {
+    color: #B4B4B4;
+    margin-bottom: 48px;
+    text-transform: capitalize; /* WHY WOULD YOU DO THIS??? */
+}
+
+/********** SECTION 2 **********/
+
+section:nth-of-type(2) {
+    width: 25%;
+}
+
+section > ul {
+    padding-left: 19px;
+    margin-bottom: 24px;
+}
+
+section > ul > li:not(:nth-of-type(1)) {
+    padding-top: 11px;
+}
+
+section > ul > li {
+    list-style-type: disc;
+    position: relative;
+}
+
+section > ul > li > a {
+    color: #FFF;
+    font: 15px/24px 'Open Sans', sans-serif;
+    transition: 0.5s all ease;
+}
+
+section > ul > li > a:hover {
+    color: #FF680A;
+    transition: 0.5s all ease;
+}
+
+/********** SECTION 3 **********/
+
+section:nth-of-type(3) {
+    padding: 0 20px;
+    width: 45%;
+}
+
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+article > h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+article img {
+    float: left;
+    margin: 0 31px 28px 0;
 }
