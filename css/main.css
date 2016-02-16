@@ -240,10 +240,6 @@ footer > ul li a {
 
 /***** MEDIA QUERIES *************************************************************/
 
-@media only screen and (min-width: 480px) {
-    #featured img {width: calc(95%/2);}
-}
-
 @media only screen and (min-width: 768px) {
     #featured img {width: calc(95%/2);}
     #featured > ul:first-of-type li {width: calc(93.5%/3);}

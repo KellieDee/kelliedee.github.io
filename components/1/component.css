@@ -2,39 +2,8 @@
 ============================================================
 ============================================================*/
 
-nav {
-    background-color: #303334; 
-    position: fixed;
-    width: 100%;
-}
-
-#wrapper {
-    background-color: inherit;
-    padding: 0 15px;
-    text-align: center;
-}
-
-/********** MENU LIST **********/
-
-ul::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-ul li {
-    display: inline-block;
-    list-style-type: none;
-    padding: 30px 35px;
-    position: relative;
-    text-align: center;
-}
-
 a {
     color: #FFF;
-    font: 18px Voltaire, sans-serif;
-    text-transform: uppercase;
-    transition: .35s all ease;
 }
 
 a:hover {
@@ -42,23 +11,94 @@ a:hover {
     transition: .35s all ease;
 }
 
-/********** SUB MENU LIST **********
+/********** MAIN NAVIGATION **********/
 
-
-ul li ul {
-    display: none;
-    left: -10px;
-    max-width: 125px;
-    margin: 15px;
-    position: absolute;
-    top: 80px;
+nav {
+    background-color: #303334;
+    padding: 0 25%;
+    position: fixed;
+    width: 100%;
 }
 
-ul li ul li {
-    background-color: #303334;
+nav > ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1.875em 2.188em;
+    position: relative;
+    text-align: center;
+}
+
+nav > ul > li > a {
+    font: 1.125em Voltaire, sans-serif;
+    text-transform: uppercase;
+    transition: .35s all ease;
+}
+
+/********** SUB MENU LISTS *********/
+
+nav > ul > li > ul > li,
+nav > ul > li > ul > li > ul > li {
     display: block;
     position: relative;
-    padding: 0;
+    text-align: center;
+}
+
+nav > ul > li > ul > li > a, 
+nav > ul > li > ul > li > ul > li > a {
+    display: block;
+    font: 400 normal 14px/1.2 'Voltaire', sans-serif;
+    padding: 5px 0;
+    position: relative;
+}
+
+/********** FIRST SUB MENU *********/
+
+nav > ul > li > ul::before {
+    content: "";
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: -11px;
+    width: 100%;
+}
+
+nav > ul > li > ul {
+    background-color: #303334;
+    display: none;
+    left: calc(-62.500px + 50%);
+    min-width: 125px;
+    padding: 20px 0;
+    position: absolute;
+    top: calc(11px + 100%);
+    z-index: 1;
+}
+
+/********** SECOND SUB MENU ********/
+
+nav > ul > li > ul > li > ul::before {
+    content: "";
+    height: 100%;
+    left: -5px;
+    position: absolute;
+    width: 5px;
+    top: 0;
+}
+
+nav > ul > li > ul > li > ul {
+    background-color: #303334;
+    display: none;
+    left: calc(5px + 100%);
+    min-width: 125px;
+    padding: 20px 0;
+    position: absolute;
+    top: -20px;
+    z-index: 1;
 }
 
 /********** PAGE STYLE *************/

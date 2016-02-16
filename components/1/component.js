@@ -1,7 +1,7 @@
 (function($) {  
 
     $('li').hover(function(){
-        $(this).find('ul').show();
+        $(this).find('ul:first').show();
     }, function(){
         $(this).find('ul').hide();
     });
