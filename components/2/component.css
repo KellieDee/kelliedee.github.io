@@ -2,14 +2,25 @@
 ============================================================
 ============================================================*/
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/../../fonts/fontawesome-webfont.eot');
+  src: url('/../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/../../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('/../../fonts/fontawesome-webfont.woff') format('woff'), 
+       url('/../../fonts/fontawesome-webfont.ttf')  format('truetype'),
+       url('/../../fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg');
+}
+
 body {
     background-color: #CCC;
-    font: 14px/24px 'Open Sans', sans-serif;
+    font: .875em/1.5em 'Open Sans', sans-serif;
+    padding: 0 6%;
 }
 
 h6 {
-    font: normal 18px/24px 'Bitter', serif;
-    margin-bottom: 36px;
+    font: normal 1.125em/1.5em 'Bitter', serif;
+    margin-bottom: 2.250em;
     position: relative;
 }
 
@@ -18,11 +29,27 @@ h6 {
 nav {
     background-color: #FFF;
     width: 100%;
+    z-index: 1;
+}
+
+nav > ul {
+    margin: 0 2.5em;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1.938em 0 1.750em 0;
+}
+
+nav > ul > li:not(:first-of-type) {
+    margin-left: 3.625em;
 }
 
 nav > ul > li > a {
     color: #929292;
-    font: normal 18px/36px 'Bitter', serif;
+    font: normal 1.125em/2.250em 'Bitter', serif;
+    position: relative;
     transition: 0.5s all ease;
 }
 
@@ -31,102 +58,105 @@ nav > ul > li > a:hover {
     transition: 0.5s all ease;
 }
 
-nav > ul {
-    margin: 0 40px;
-}
-
-nav > ul > li {
+nav > ul > li > a.dropDown::after {
+    content: "\f078";
     display: inline-block;
-    list-style-type: none;
-    padding: 31px 0 28px 0;
-}
-
-nav > ul > li:not(:first-of-type) {
-    margin-left: 58px;
+    font: .6em 'FontAwesome';
+    margin-left: 1em;
+    position: absolute;
+    top: 0.313em;
 }
 
 /********** SUBMENU **********/
 
-div {
+li > section {
     background-color: #2E3026;
     color: #FFF;
     display: none;
     position: absolute;
-    left: 0;
-    padding: 50px 30px 0 30px;
-    top: 95px;
+    left: 6%;
+    padding: 3.125em 1.875em 0 1.875em;
+    right: 6%;
+    top: 12%;
 }
 
-div::before {
+li > section::before {
     content: "";
     left: 8%;
     position: absolute;
-    top: -7px;
+    top: -0.438em;
     border-color: transparent transparent #2E3026 transparent;
     border-style: solid;
-    border-width: 0 7px 7px 7px;
+    border-width: 0 0.438em 0.438em 0.438em;
+    z-index: 2;
     
 }
 
-section {
+section > section {
     float: left;
-    padding: 0 20px;
+    padding: 0 1.25em;
 }
 
 /********** SECTION 1 **********/
 
-section:nth-of-type(1) {
+section > section:nth-of-type(1) {
     width: 30%;
 }
 
 #about p::before {
     content: url('images/megamenu-img1.jpg');
     display: block;
-    margin-bottom: 28px;
+    margin-bottom: 1.750em;
     clear: both;
 }
 
 #about p {
     color: #B4B4B4;
-    margin-bottom: 48px;
+    margin-bottom: 3em;
     text-transform: capitalize; /* WHY WOULD YOU DO THIS??? */
 }
 
 /********** SECTION 2 **********/
 
-section:nth-of-type(2) {
+section > section:nth-of-type(2) {
     width: 25%;
 }
 
-section > ul {
-    padding-left: 19px;
-    margin-bottom: 24px;
+section > section > ul {
+    margin-bottom: 1.5em;
 }
 
-section > ul > li:not(:nth-of-type(1)) {
-    padding-top: 11px;
+section > section > ul > li:not(:nth-of-type(1)) {
+    padding-top: .688em;
 }
 
-section > ul > li {
-    list-style-type: disc;
+section > section > ul > li {
+    list-style-type: none;
     position: relative;
 }
 
-section > ul > li > a {
+section > section > ul > li a::before {
+    content: "\f111";
+    display: inline-block;
+    font: .6em 'FontAwesome';
+    margin-right: 1.5em;
+}
+
+section > section > ul > li > a {
     color: #FFF;
-    font: 15px/24px 'Open Sans', sans-serif;
+    font: .938em/1.5em 'Open Sans', sans-serif;
     transition: 0.5s all ease;
 }
 
-section > ul > li > a:hover {
+section > section > ul > li > a:hover {
     color: #FF680A;
     transition: 0.5s all ease;
 }
 
 /********** SECTION 3 **********/
 
-section:nth-of-type(3) {
-    padding: 0 20px;
+section > section:nth-of-type(3) {
+    padding: 0 1.25em;
     width: 45%;
 }
 
@@ -138,7 +168,7 @@ article::after {
 
 article > h6{
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: .625em;
     text-transform: uppercase;
 }
 
@@ -154,12 +184,12 @@ article > h6 > a:hover {
 
 article > img {
     float: left;
-    margin: 0 31px 28px 0;
+    margin: 0 1.938em 1.750em 0;
 }
 
 article > p {
     color: #B4B4B4;
-    font: 14px/24px 'Open Sans', sans-serif;
-    padding-bottom: 24px;
+    font: .875em/1.5em 'Open Sans', sans-serif;
+    padding-bottom: 1.5em;
     text-transform: capitalize /* Seriously, WHY? */
 }

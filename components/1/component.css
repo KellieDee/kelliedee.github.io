@@ -2,6 +2,18 @@
 ============================================================
 ============================================================*/
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/../../fonts/fontawesome-webfont.eot');
+  src: url('/../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/../../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('/../../fonts/fontawesome-webfont.woff') format('woff'), 
+       url('/../../fonts/fontawesome-webfont.ttf')  format('truetype'),
+       url('/../../fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg');
+}
+
+/********** BODY STYLES **************/
+
 a {
     color: #FFF;
 }
@@ -15,8 +27,9 @@ a:hover {
 
 nav {
     background-color: #303334;
-    padding: 0 25%;
     position: fixed;
+    margin: 0 auto;
+    text-align: center;
     width: 100%;
 }
 
@@ -24,6 +37,10 @@ nav > ul::after {
     content: "";
     display: table;
     clear: both;
+}
+
+nav > ul {
+    white-space: nowrap;
 }
 
 nav > ul > li {
@@ -52,8 +69,8 @@ nav > ul > li > ul > li > ul > li {
 nav > ul > li > ul > li > a, 
 nav > ul > li > ul > li > ul > li > a {
     display: block;
-    font: 400 normal 14px/1.2 'Voltaire', sans-serif;
-    padding: 5px 0;
+    font: 400 normal 0.875em/1.2 'Voltaire', sans-serif;
+    padding: 0.313em 0;
     position: relative;
 }
 
@@ -61,21 +78,21 @@ nav > ul > li > ul > li > ul > li > a {
 
 nav > ul > li > ul::before {
     content: "";
-    height: 11px;
+    height: 0.688em;
     left: 0;
     position: absolute;
-    top: -11px;
+    top: -0.688em;
     width: 100%;
 }
 
 nav > ul > li > ul {
     background-color: #303334;
     display: none;
-    left: calc(-62.500px + 50%);
-    min-width: 125px;
-    padding: 20px 0;
+    left: calc(-3.906em + 50%);
+    min-width: 7.813em;
+    padding: 1.250em 0;
     position: absolute;
-    top: calc(11px + 100%);
+    top: calc(0.688em + 100%);
     z-index: 1;
 }
 
@@ -84,20 +101,20 @@ nav > ul > li > ul {
 nav > ul > li > ul > li > ul::before {
     content: "";
     height: 100%;
-    left: -5px;
+    left: -0.313em;
     position: absolute;
-    width: 5px;
+    width: 0.313em;
     top: 0;
 }
 
 nav > ul > li > ul > li > ul {
     background-color: #303334;
     display: none;
-    left: calc(5px + 100%);
-    min-width: 125px;
-    padding: 20px 0;
+    left: calc(0.313em + 100%);
+    min-width: 7.813em;
+    padding: 1.250em 0;
     position: absolute;
-    top: -20px;
+    top: -1.250em;
     z-index: 1;
 }
 
@@ -112,12 +129,31 @@ p {
 
 /********** MEDIA QUERIES **********/
 
-@media only screen and (min-width: 488px) and (max-width: 787px) {
-    /* Hamburger Button
-    nav ul li::after {
-        content: url('images/hamburger.png') no-repeat;
-    } */
-    nav ul li {padding: 0;}
-    nav ul li a {display: none;}
+@media only screen and (max-width: 787px) {
+    
+    nav {
+        padding: 0;
+        position: static;
+        text-align: center;
     }
+    
+    nav::before {
+        background-color: #FFF;
+        color: #E8504F;
+        content: "\f0c9";
+        display: inline-block;
+        font: 1.5em/2.5em FontAwesome;
+        padding: 0 .5em;
+        position: relative;
+    }
+    
+    nav ul {
+        display: none;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (min-width: 1039px) {
+    
 }

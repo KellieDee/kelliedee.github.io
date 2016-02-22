@@ -2,6 +2,16 @@
 ============================================================
 ============================================================*/
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/../../fonts/fontawesome-webfont.eot');
+  src: url('/../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/../../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('/../../fonts/fontawesome-webfont.woff') format('woff'), 
+       url('/../../fonts/fontawesome-webfont.ttf')  format('truetype'),
+       url('/../../fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg');
+}
+
 body {
     font-family: Lato, sans-serif;    
 }
@@ -18,9 +28,9 @@ a:hover,
 }
 
 dl {
-    font-size: 14px;
-    line-height: 23px;
-    margin-bottom: 54px;
+    font-size: 0.875em;
+    line-height: 1.438em;
+    margin-bottom: 3.375em;
 }
 
 dl dt {
@@ -28,19 +38,19 @@ dl dt {
 }
 
 dl dt:not(:first-of-type) {
-    width: 75px;
+    width: 4.688em;
 }
 
 h2 {
     color: #E8EEF2;
-    font: 900 16px/20px Lato, sans-serif;
+    font: 900 1em/1.25em Lato, sans-serif;
     text-transform: uppercase;
 }
 
 nav,
 nav h2,
 section h2 {
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
 }
 
 ul li {
@@ -48,7 +58,7 @@ ul li {
 }
 
 nav ul li a {
-    font: 300 14px/23px Lato, sans-serif;
+    font: 300 .875em/1.438em Lato, sans-serif;
 }
 
 #active a {
@@ -61,26 +71,26 @@ input[type="text"] {
     border-right: none;
     color: #E8EEF2;
     float: left;
-    font: normal 12px/20px Lato, sans-serif;
-    margin-top: 10px;
+    font: normal 0.75em/1.25em Lato, sans-serif;
+    margin-top: 0.625em;
     min-width: 100%;
     outline: none;
-    padding: 10px 105px 11px 13px;
+    padding: 0.625em 6.563em 0.688em 0.813em;
     position: relative;
 }
 
 input[type="submit"] {
     color: #E8EEF2;
     float: right;
-    font: 700 16px/22px Lato, sans-serif;
-    height: 43px;
+    font: 700 1em/1.688em Lato, sans-serif;
+    height: 2.1em;
     background-color: #DC6226;
-    margin-left: -97px;
-    margin-top: 10px;
+    margin-left: -6.063em;
+    margin-top: .5em;
     position: absolute;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    width: 97px;
+    width: 6.063em;
 }
 
 input[type="submit"]:hover {
@@ -94,15 +104,15 @@ footer {
 }
 
 footer:first-of-type {
-    padding: 75px 15px 0px 15px;
+    padding: 4.688em 0.938em 0em 0.938em;
 }
 
 #legal {
     border-top: 3px solid #5B5B5B;
     color: #E8EEF2;
-    font: normal 14px/20px Lato, sans-serif;
+    font: normal 0.875em/1.25em Lato, sans-serif;
     margin-top: 40px;
-    padding: 45px 15px;
+    padding: 2.5em 0.938em;
     text-align: center;
     text-transform: capitalize;
 }
@@ -117,7 +127,7 @@ form {
 }
 
 #connect {
-    margin-bottom: 95px;
+    margin-bottom: 5.938em;
 }
 
 #connect::after {
@@ -132,8 +142,8 @@ strong {
 }
 
 #switch {
-    font-size: 11px;
-    margin-top: 10px;
+    font-size: 0.688em;
+    margin-top: 0.625em;
 }
 
 #switch a:hover {
@@ -141,7 +151,7 @@ strong {
 }
 
 aside {
-    padding-bottom: 20px;
+    padding-bottom: 1.250em;
 }
 
 aside::after {
@@ -151,7 +161,7 @@ aside::after {
 }
 
 section:not(#connect) {
-    width: 236px;
+    width: 14.75em;
 }
 
 #wrapper {
@@ -166,62 +176,78 @@ footer:not(#legal)::after {
 
 /********** SOCIAL MEDIA ***********/
 
+#connect li {
+    display: inline-block;
+    position: relative;
+}
+
 #connect li a {
     display: block;
     float: left;
-    height: 55px;
+    height: 1.5em;
     text-indent: -9999px;
+    width: 2em;
+}
+
+#connect li a:hover::before {
+    color: #DC6226;
+    transition: all 0.3s ease;
 }
 
 #connect li a:not(first) {
-    margin-left: 5px;
+    margin-left: 0.313em;
 }
 
-#facebook {
-    background-image: url('images/facebook.png');
-    width: 30px;
+#connect li a::before {
+    color: #E8EEF2;
+    display: block;
+    font: 1.5em 'FontAwesome';
+    position: absolute;
+    text-indent: 0;
+    transition: all 0.3s ease;
 }
 
-#google {
-    background-image: url('images/google.png');
-    width: 45px;
+a[href*="facebook"]::before {
+    content: "\f09a";
 }
 
-#instagram {
-    background-image: url('images/instagram.png');
-    width: 45px;
+a[href*="google"]::before {
+    content: "\f0d5";
 }
 
-#pinterest {
-    background-image: url('images/pinterest.png');
-    width: 45px;
+a[href*="instagram"]::before {
+    content: "\f16d";
 }
 
-#twitter {
-    background-image: url('images/twitter.png');
-    width: 45px;
+a[href*="pinterest"]::before {
+    content: "\f0d2";
+}
+
+a[href*="twitter"]::before {
+    content: "\f099";
 }
 
 /********** MEDIA QUERIES **********/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 60px; padding-left: 10px; width: 40%;}
+    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 3.75em; padding-left: 0.625em; width: 40%;}
     div:not(#wrapper), nav, section:not(#connect) {float: left;}
     div:not(#wrapper) {width: 60%;}
-    nav {margin-right: 20px;}
+    nav {margin-right: 1.250em;}
     section:not(#connect) {max-width: 100%}
-    #connect {margin-right: 10px;}
+    #connect {margin-right: 0.625em;}
     #legal {clear:both;}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1999px) {
-    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 60px; padding-left: 10px; width: 40%;}
+    aside {border-left: 1px solid #5B5B5B; float: right; margin-bottom: 3.75em; padding-left: 1.563em; width: 40%;}
     div:not(#wapper), nav, section:not(#connect) {float: left;}
     div:not(#wrapper) {width: 60%;}
-    nav {margin-right: 60px; width:140px;}
+    nav {margin-right: 3.75em; width:8.75em;}
     footer:not(#legal) {max-width:100%;}
-    section:not(#connect) {width:300px;}
-    #connect {margin-right: 10px;}
+    section:not(#connect) {width:18.75em;}
+    #connect {margin-right: 0.625em;}
     #legal {clear:both;}
-    #wrapper {width: 90%; margin: 0 5%;}
+    #switch {display: none;}
+    #wrapper {width: 85%; margin: 0 7%;}
 }

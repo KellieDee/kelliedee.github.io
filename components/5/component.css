@@ -2,6 +2,16 @@
 ============================================================
 ============================================================*/
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/../../fonts/fontawesome-webfont.eot');
+  src: url('/../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/../../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('/../../fonts/fontawesome-webfont.woff') format('woff'), 
+       url('/../../fonts/fontawesome-webfont.ttf')  format('truetype'),
+       url('/../../fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg');
+}
+
 h2,
 article:nth-of-type(2),
 article:nth-of-type(3) {
@@ -11,8 +21,8 @@ article:nth-of-type(3) {
 section {
     border: 2px solid #DFDFDF;
     display: block;
-    margin: 80px 42.5px;
-    padding: 45px 20px;
+    margin: 5em 2.656em;
+    padding: 2.813em 1.25em;
     position: relative;
 }
 
@@ -20,21 +30,21 @@ section {
 
 img {
     border-radius: 50%;
-    margin: 0 20.5px 20px 20.5px;
+    margin: 0 1.281em 1.25em 1.281em;
     transform-style: preserve-3d;
 }
 
 p {
     color: #585858;
-    font: normal 14px/24px 'Raleway', sans-serif;
-    padding-top: 10px;
+    font: normal .875em/1.5em 'Raleway', sans-serif;
+    padding-top: .625em;
     position: block;
 }
 
 h4 {
     display: block;
-    font: 600 18px/30px 'Raleway', sans-serif;
-    margin-top: 40px;
+    font: 600 1.125em/1.875em 'Raleway', sans-serif;
+    margin-top: 2.5em;
     text-transform: uppercase;
 }
 
@@ -42,65 +52,78 @@ h4::before {
     background-color: #80C2C0;
     content: "";
     display: block;
-    height: 2px;
-    margin-bottom: 25px;
-    width: 45px;
+    height: .125em;
+    margin-bottom: 1.563em;
+    width: 2.813em;
 }
 
 /*********** NAV CONTROLS **********/
 
 ul {
-    margin-top: 40px;
+    margin-top: 2.5em;
     list-style-type: none;
     display: inline-block;
 }
 
 
 ul li {
-    background-image: url(images/navdot.png);
     cursor: pointer;
     display: inline-block;
-    height: 36px;
+    height: 1em;
     text-indent: -9999px;
-    width: 36px;
+    width: 1em;
 }
 
-ul li:hover,
-.active {
-    background-image: url(images/navdot-active.png)
+ul li:not(.active)::before {
+    color: #80C2C0;
+    content: "\f1db";
+    display: block;
+    font: 1.1em 'FontAwesome';
+    position: absolute;
+    text-indent: 0;
+}
+
+ul li:hover::before,
+ul li.active::before {
+    color: #80C2C0;
+    content: "\f111";
+    display: block;
+    font: 1.1em 'FontAwesome';
+    position: absolute;
+    text-indent: 0;
 }
 
 /********** MEDIA QUERIES **********/
 
 @media only screen and (min-width: 488px) and (max-width: 787px) {
-    img {margin: 0 55.5px 20px 55.5px;}
-    section{padding:45px;}
+    img {margin: 0 3.469em 1.25em 3.469em;}
+    section{padding:2.813em;}
 }
 
 @media only screen and (min-width: 788px) and (max-width: 996px) {
-    article::after, section::after {content:""; display:block; clear:both;}
-    img {float: left; margin: 0 30px 0 0;}
-    h4, p, ul {float:right; width: 409px;}
-    section {margin: 80px 13.5px; padding:45px;}
+    article::after, section::after {content: ""; display: block; clear: both;}
+    img {float: left; margin: 0 1.875em 0 0;}
+    h4, p, ul {float: right; width: 409px;}
+    section {margin: 5em 13.5px; padding:45px;}
 }
 
 @media only screen and (min-width: 997px) and (max-width: 1190px) {
-    article::after, section::after {content:""; display:block; clear:both;}
-    img {float: left; margin: 0 30px 0 0;}
+    article::after, section::after {content: ""; display: block; clear: both;}
+    img {float: left; margin: 0 1.875em 0 0;}
     h4, p, ul {float:right; width: 601px;}
-    section {margin: 80px 20.5px; padding:45px;}
+    section {margin: 5em 1.281em; padding:2.813em;}
 }
 
 @media only screen and (min-width: 1191px) and (max-width: 1424px) {
     article::after, section::after {content:""; display:block; clear:both;}
-    img {float: left; margin: 0 30px 0 0;}
+    img {float: left; margin: 0 1.875em 0 0;}
     h4, p, ul {float:right; width: 831px;}
-    section {margin: 80px 8px; padding:45px;}
+    section {margin: 5em .5em; padding:2.813em;}
 }
 
 @media only screen and (min-width: 1424px) {
     article::after, section::after {content:""; display:block; clear:both;}
-    img {float: left; margin: 0 30px 0 0;}
+    img {float: left; margin: 0 1.875em 0 0;}
     h4, p, ul {float:right; width: 831px;}
-    section {margin: 80px 127px; padding:45px;}
+    section {margin: 5em 7.938em; padding:2.813em;}
 }

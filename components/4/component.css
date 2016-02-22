@@ -2,18 +2,28 @@
 ============================================================
 ============================================================*/
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/../../fonts/fontawesome-webfont.eot');
+  src: url('/../../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/../../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('/../../fonts/fontawesome-webfont.woff') format('woff'), 
+       url('/../../fonts/fontawesome-webfont.ttf')  format('truetype'),
+       url('/../../fonts/fontawesome-webfont.svg#svgFontAwesome') format('svg');
+}
+
 section {
     background-color: rgb(241,241,241);
-    padding-top: 40px;
+    padding-top: 2.5em;
     z-index: 2;
 }
 
 h3 {
     color: #131313;
-    font: bold 24px/43.6363px 'Raleway', sans-serif;
-    letter-spacing: 1.008px;
-    margin: 0 15px 0px 15px;
-    padding-bottom: 37px;
+    font: bold 1.5em/2.727em 'Raleway', sans-serif;
+    letter-spacing: 0.063em;
+    margin: 0 0.938em;
+    padding-bottom: 2.313em;
     text-align: center;
     text-transform: uppercase;
     vertical-align: top;
@@ -39,19 +49,19 @@ h4 {
     color: #FFF;
     display: block;
     font: bold 18px/30.8572px 'Raleway', sans-serif;
-    letter-spacing: 1.008px;
+    letter-spacing: 0.063em;
     text-transform: uppercase;
     vertical-align: top;
 }
 
 header {
     background-color: rgb(243,181,83);
-    bottom: 9.188px;
+    bottom: 0.574em;
     display: block;
-    left: 7.6875px;
-    padding: 10px 10px 13px 10px;
+    left: 0.480em;
+    padding: .625em .625em .813em .625em;
     position: absolute;
-    right: 7.6875px;
+    right: 0.480em;
     z-index: 1;
 }
 
@@ -59,7 +69,7 @@ p {
     color: #FFF;
     display: block;
     float: left;
-    font: normal 12px/12px 'Raleway', sans-serif;
+    font: normal .750em/.750em 'Raleway', sans-serif;
     vertical-align: top;
 }
 
@@ -68,51 +78,69 @@ p {
 ul {
     display: inline-block;
     float: right;
+    left: 13.5em;
     position: absolute;
-    right: 10px;
-    top: 23px;
+    top: 1.438em;
 }
 
 ul li {
     display: inline-block;
+    margin-left: 1.2em;
+    text-indent: -9999px;
 }
 
-ul li a {
+ul li a::before {
     color: #FFF;
-    transition: 0.3s all ease;
+    display: block;
+    font: 1em 'FontAwesome';
+    position: absolute;
+    text-indent: 0;
+    transition: ease all 0.3s;
 }
 
-ul li a:hover {
+a[href*="facebook"]::before {
+    content: "\f09a";
+}
+
+a[href*="linkedin"]::before {
+    content: "\f0e1";
+}
+
+a[href*="twitter"]::before {
+    content: "\f099";
+}
+
+ul li a:hover::before {
     color: #000;
-    transition: 0.3s all ease;
+    transition: ease all 0.3s;
 }
 
 /********** MEDIA QUERIES **********/
 
 @media only screen and (min-width: 488px) and (max-width: 787px) {
     div {max-width: calc(100%/2);}
-    h4 {font: bold 14px/24.0001px 'Raleway', sans-serif;}
+    h4 {font: bold .875em/1.5em 'Raleway', sans-serif;}
 }
 
 @media only screen and (min-width: 788px) and (max-width: 996px) {
     div {max-width: calc(100%/2);}
-    header {bottom: 1px; display: none; padding: 20px 15px 18px 16px; left: 27.297px; right: 27.297px;}
-    ul { right: 20px; top:33px;}
+    header {bottom: 0.063em; display: none; padding: 1.25em .938em 1.125em 1em; left: 1.706em; right: 1.706em;}
+    ul { right: 1.250em; top:2.063em;}
 }
 
 @media only screen and (min-width: 997px) and (max-width: 1424px) {
     div {max-width: calc(100%/4);}
-    h4 {font: bold 14px/1.2px 'Raleway', sans-serif; padding-top: 10px;}
-    header {bottom: 1px; display: none; padding: 10px 10px 13px 10px; left: 5.063px; right: 5.063px;}
-    p {padding-top: 5px;}
-    ul { right: 10px; top: 15px;}
+    h4 {font: bold .875em/0.075em 'Raleway', sans-serif; padding-top: .625em;}
+    header {bottom: 0.063em; display: none; padding: .625em .625em .813em .625em; left: 0.316em; right: 0.316em;}
+    p {padding-top: 0.313em;}
+    ul { right: .625em; top: .938em;}
 }
 
 @media only screen and (min-width: 1293px) and (max-width: 1999px) {
     div {max-width: calc(100%/4);}
-    h4 {font: bold 14px/1.2px 'Raleway', sans-serif; padding-top: 10px;}
-    header {bottom: 1px; display: none; padding: 10px 10px 13px 10px; left: 5.063px; right: 5.063px;}
-    p {padding-top: 5px;}
-    section {margin: 0 66.5px;}
-    ul { right: 10px; top: 15px;}
+    h4 {font: bold .875em/0.075em 'Raleway', sans-serif; padding-top: .625em;}
+    header {bottom: 0.063em; display: none; padding: .625em .625em .813em .625em; left: 0.316em; right: 0.316em;}
+    p {padding-top: 0.313em;}
+    section {margin: 0 4.156em;}
+    ul { right: .625em; top: .938em;}
 }

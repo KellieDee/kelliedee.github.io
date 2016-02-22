@@ -1,13 +1,8 @@
 <!--
         /********** IMPROVEMENT TO-DO LIST **********/
-        - Set Home to active (colorize)
-        - Adjust nav max-width
-        - Wrap/center main navigation and mega menu
-        - Fix upward pointing arrow
-        - Create second sub-menu
+        - Create 'pages' sub-menu
         - Hamburger button / media queries
-        - FontAwesome list-item disc
-        - jQuery/CSS slide up animation
+        - JS/CSS slideUp animation
         - Image zoom animation
         - Convert px to em
         **********************************************
@@ -16,6 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>WSP Component: Kellie Pickering</title>
     <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
@@ -26,8 +22,8 @@
 	<!-- Component -->
     <nav>
         <ul>
-            <li><a href="">Home</a>
-                <div>
+            <li><a href="" class="dropDown">Home</a>
+                <section>
                     <section id="about">
                         <h6>About Us</h6>
                         <p>Travel throughout Africa with the Safari Adventure Company. Unrivaled experience, unlimited knowledge, and a passiong for exploring Africa.</p>
@@ -58,10 +54,10 @@
                             <p>Experience South Africa as an insider- with inside access to sports stadiums, traditional villages, local pubs...</p>
                         </article>
                     </section>
-                </div>
+                </section>
             </li>
             <li><a href="">About</a></li>
-            <li><a href="">Pages</a></li>
+            <li><a href="" class="dropDown">Pages</a></li>
             <li><a href="">Gallery</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="">Contact</a></li>

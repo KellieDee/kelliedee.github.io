@@ -1,9 +1,9 @@
 (function($) {  
 
     $('li').hover(function(){
-        $(this).find('div').slideDown();
+        $(this).find('section:first').slideDown();
     }, function(){
-        $(this).find('div').slideUp();
+        $(this).find('section:first').slideUp();
     });
         
 })(jQuery);
